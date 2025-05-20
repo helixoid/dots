@@ -1,0 +1,19 @@
+* {
+    selected-text:	#11111b;
+    selected-background: #74c7ec;
+
+    prompt-text: #cba6f7;
+    prompt-background: #1e1e2e;
+
+    normal-text: #cdd6f4;
+    normal-background: #313244;
+
+    window-border: #a6e3a1;
+    window-background: #1e1e2e;
+
+    scrollbar-filled: #f38ba8;
+    scrollbar-empty: #f5e0dc;
+
+    error-message: #ffb4ab;
+    error-message-border: #690005;
+}

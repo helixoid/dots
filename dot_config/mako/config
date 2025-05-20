@@ -1,0 +1,50 @@
+# General settings
+max-visible=5
+sort=-time
+layer=overlay
+anchor=top-right
+font=JetBrains Mono 12
+width=500
+height=200
+margin=10
+padding=15
+border-size=3
+border-radius=5
+default-timeout=5000
+ignore-timeout=0
+
+# Gruvbox Dark Hard colors
+background-color=#1d2021
+text-color=#ebdbb2
+border-color=#fe8019
+progress-color=over #83a598
+
+# Low urgency
+[urgency=low]
+background-color=#1d2021
+text-color=#a89984
+border-color=#b8bb26
+
+# Normal urgency
+[urgency=normal]
+background-color=#1d2021
+text-color=#ebdbb2
+border-color=#fe8019
+
+# Critical urgency
+[urgency=critical]
+background-color=#1d2021
+text-color=#fb4934
+border-color=#fb4934
+default-timeout=0
+
+# Application-specific settings (examples)
+[app-name=Spotify]
+background-color=#1d2021
+text-color=#b8bb26
+border-color=#b8bb26
+
+[app-name=Firefox]
+background-color=#1d2021
+text-color=#83a598
+border-color=#fe8019

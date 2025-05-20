@@ -1,0 +1,36 @@
+@ News < reload-period 1
+https://archlinux.org/feeds/news/ "Arch Linux News"
+https://www.animenewsnetwork.com/news/rss.xml?ann-edition=w "Anime News Network"
+https://news.ycombinator.com/rss "Hacker News"
+https://www.phoronix.com/rss.php "Linux News | Phoronix"
+
+@ Torrents < reload-period 1
+https://nyaa.si/?page=rss&u=HAYAKU-tan "HAYAKU-tan | Nyaa"
+https://nyaa.si/?page=rss&u=Judas "Judas Anime | Nyaa"
+https://nyaa.si/?page=rss&c=2_1&f=0&u=Mashin "Mashin | Nyaa"
+https://nyaa.si/?page=rss&q=Hirayasumi&c=0_0&f=0 "Hirayasumi Manga Updates | Nyaa"
+https://nyaa.si/?page=rss&q=kingdom&c=0_0&f=0&u=0v3r "Kingdom Manga Updates | Nyaa"
+https://nyaa.si/?page=rss&u=tsuna69 "1r0n | Nyaa" 
+https://nyaa.si/?page=rss&u=wangsn "Wangsn | Nyaa"
+https://subsplease.org/rss/?r=1080 "Subsplease"
+https://yts.mx/rss "YTS"
+
+@ FOSS Updates < reload-period 1
+https://github.com/InioX/matugen/releases.atom "Matugen Updates"
+https://github.com/neurocyte/flow/releases.atom "Flow-Control Text Editor Updates"
+https://neovim.io/news.xml "Neovim Updates"
+https://github.com/Alexays/Waybar/releases.atom "Waybar Updates"
+https://github.com/fonic/ipfilter/releases.atom "IPfilter List Updates"
+https://github.com/GloriousEggroll/proton-ge-custom/releases.atom "Proton-GE Updates"
+https://github.com/Horus645/swww/releases.atom "Swww Updates"
+https://github.com/hyprwm/Hyprland/releases.atom "Hyprland Updates"
+https://github.com/mpv-player/mpv/releases.atom "MPV Updates"
+https://github.com/pystardust/ani-cli/releases.atom "Ani-Cli Updates"
+https://github.com/tomasklaen/uosc/releases.atom "UOSC/MPV_UI Updates"
+https://github.com/transmission/transmission/releases.atom "Transmission Updates"
+https://github.com/ventoy/Ventoy/releases.atom "Ventoy Updates"
+https://codeberg.org/explosion-mental/wallust/releases.rss "Wallust Updates"
+
+@ YouTube
+https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA "Brodie Robertson"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCH18915fTE6yZzKrqdea8RQ "Clint's Reptiles"

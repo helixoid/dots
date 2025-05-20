@@ -1,0 +1,254 @@
+/* Import colorscheme */
+@import "colorscheme.css";
+
+/* Global styling */
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrains Mono", "Symbols Nerd Font Mono";
+  font-size: 14px;
+  font-weight: bold;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Waybar window */
+window#waybar {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+/* Common module styling */
+#workspaces,
+#mpris,
+#tray,
+#clock,
+#network,
+#temperature,
+#backlight,
+#pulseaudio,
+#battery {
+  background-color: @background;
+  color: @foreground;
+  border-radius: 10px;
+  margin: 3px 3px;
+  padding: 2px 10px;
+  border: 1px solid @border-color;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for all modules */
+#workspaces:hover,
+#mpris:hover,
+#tray:hover,
+#clock:hover,
+#network:hover,
+#temperature:hover,
+#backlight:hover,
+#pulseaudio:hover,
+#battery:hover {
+  border-color: @border-color-hover;
+  box-shadow: 0 0 5px rgba(235, 219, 178, 0.2);
+}
+
+/* --------- LEFT MODULES STYLING --------- */
+
+/* Workspaces styling */
+#workspaces {
+  margin-left: 6px;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  color: @foreground-alt;
+  background: transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+  color: @workspaces-color;
+  background-color: @background-alt;
+}
+
+#workspaces button:hover {
+  background-color: @background-alt;
+  color: @foreground;
+}
+
+#workspaces button.urgent {
+  background-color: @alert;
+  color: @background;
+}
+
+/* MPRIS styling */
+#mpris {
+  color: @primary;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+#mpris.paused {
+  color: @foreground-alt;
+  font-style: italic;
+}
+
+#mpris.stopped {
+  background-color: @background;
+  color: @disabled;
+}
+
+/* Tray styling */
+#tray {
+  margin-left: 6px;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  color: @alert;
+}
+
+/* --------- CENTER MODULES STYLING --------- */
+
+/* Clock styling */
+#clock {
+  color: @clock-color;
+  font-weight: bold;
+}
+
+/* --------- RIGHT MODULES STYLING --------- */
+
+/* Network styling */
+#network {
+  color: @network-color;
+}
+
+#network.disconnected {
+  color: @alert;
+}
+
+#network.linked {
+  color: @foreground-alt;
+}
+
+#network.alt {
+  color: @network-color;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+}
+
+/* Show different color for upload/download icons */
+#network.alt span:first-child {
+  color: @battery-charging-color;
+  margin-right: 0;
+}
+
+#network.alt span:last-child {
+  color: @secondary;
+  margin-left: 5px;
+}
+
+/* Temperature styling */
+#temperature {
+  color: @temp-color;
+}
+
+#temperature.critical {
+  color: @alert;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* Backlight styling */
+#backlight {
+  color: @backlight-color;
+}
+
+/* PulseAudio styling */
+#pulseaudio {
+  color: @volume-color;
+}
+
+#pulseaudio.muted {
+  color: @disabled;
+}
+
+/* Battery styling */
+#battery {
+  color: @battery-color;
+  margin-right: 6px;
+}
+
+#battery.charging {
+  color: @battery-charging-color;
+}
+
+#battery.warning:not(.charging) {
+  color: @battery-warning-color;
+}
+
+#battery.critical:not(.charging) {
+  color: @battery-critical-color;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* Blinking animation */
+@keyframes blink {
+  to {
+    color: @foreground;
+    background-color: @alert;
+  }
+}
+
+/* Tooltip styling */
+tooltip {
+  background-color: @tooltip-background;
+  border: 1px solid @tooltip-border;
+  border-radius: 8px;
+  min-width: 300px; /* Increased tooltip width */
+}
+
+tooltip label {
+  color: @foreground;
+  padding: 5px;
+}
+
+/* Calendar styling */
+calendar {
+  background-color: @background;
+  border: 1px solid @border-color;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+calendar:selected {
+  background-color: @primary;
+  color: @background;
+  border-radius: 8px;
+}
+
+calendar.header {
+  color: @foreground;
+  font-weight: bold;
+}
+
+calendar.button {
+  color: @foreground-alt;
+}
+
+calendar.highlight {
+  color: @secondary;
+  font-weight: bold;
+}
+
+calendar:indeterminate {
+  color: @disabled;
+}

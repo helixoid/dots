@@ -1,0 +1,154 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin-top": 5,
+  "margin-left": 10,
+  "margin-right": 10,
+  "height": 32,
+  "spacing": 5,
+
+  "modules-left": ["hyprland/workspaces", "mpris", "tray"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "network",
+    "temperature",
+    "backlight",
+    "pulseaudio",
+    "battery",
+  ],
+
+  // Left modules
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "all-outputs": true,
+    "sort-by-number": true,
+    "format-icons": {
+      "1": "󰲠",
+      "2": "󰲢",
+      "3": "󰲤",
+      "4": "󰲦",
+      "5": "󰲨",
+      "6": "󰲪",
+      "7": "󰲬",
+      "8": "󰲮",
+      "9": "󰲰",
+      "10": "󰿬",
+      "urgent": "󰀨",
+      "default": "󰑊",
+    },
+  },
+
+  "mpris": {
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "{status_icon} <i>{dynamic}</i>",
+    "player-icons": {
+      "default": "󰎆",
+      "mpv": "󰝚",
+      "firefox": "󰈹",
+      "chromium": "󰊯",
+      "spotify": "󰓇",
+      "ncspot": "󰓇",
+      "vlc": "󰕼",
+    },
+    "status-icons": {
+      "paused": "󰏤",
+      "playing": "󰐊",
+    },
+    // "ignored-players": ["firefox"],
+    "max-length": 40,
+    "dynamic-order": ["title", "artist", "album"],
+    "dynamic-importance": ["title", "artist", "album"],
+    "dynamic-separator": " - ",
+    "tooltip-format": "Player: {player}\nArtist: {artist}\nTitle: {title}\nAlbum: {album}",
+    "player-args": {
+      "spotify": "-p",
+      "playerctld": "--player=spotify",
+    },
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "on-click-middle": "playerctl previous",
+    "on-scroll-up": "playerctl volume 0.05+",
+    "on-scroll-down": "playerctl volume 0.05-",
+    "interval": 2,
+    "unknown-tag": "No Media Playback",
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 10,
+  },
+
+  // Center modules
+  "clock": {
+    "format": " {:%H:%M}",
+    "format-alt": " {:%a, %b %d %Y}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "none",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffab91'><b>{}</b></span>",
+        "days": "<span color='#eeffff'>{}</span>",
+        "weeks": "<span color='#80cbc4'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc80'><b>{}</b></span>",
+        "today": "<span color='#ff8f8f'><b><u>{}</u></b></span>",
+      },
+    },
+    "on-click-right": "mode",
+  },
+
+  // Right modules
+  "network": {
+    "format-wifi": "󰖩 {essid}",
+    "format-ethernet": "󰈀 {ipaddr}",
+    "format-disconnected": "󰖪",
+    "format-alt": "󰕒 {bandwidthUpBytes} 󰇚 {bandwidthDownBytes}",
+    "tooltip-format-wifi": "Signal Strength: {signalStrength}%",
+    "interval": 1,
+    "on-click": "mode",
+    "max-length": 20,
+  },
+
+  "temperature": {
+    "thermal-zone": 2,
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    "format-critical": "󱃂 {temperatureC}°C",
+    "format": "󱃃 {temperatureC}°C",
+  },
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "on-scroll-up": "brightnessctl set +5%",
+    "on-scroll-down": "brightnessctl set 5%-",
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"],
+    },
+    "on-click": "pavucontrol",
+    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+  },
+
+  "battery": {
+    "bat": "BAT1",
+    "adapter": "ADP0",
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󱘖 {capacity}%",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+  },
+}
