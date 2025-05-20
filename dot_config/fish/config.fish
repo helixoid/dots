@@ -4,9 +4,11 @@ if status is-interactive
     starship init fish | source
     # atuin init fish | source
     export BAT_THEME="gruvbox-dark"
-    
+
     # Aliases
     alias v="nvim"
+    alias dotsup="chezmoi re-add"
+    alias dotspull="chezmoi update"
     alias mpc="rmpc"
     alias prop="hyprctl clients | grep -i 'class\|title\|xwayland'"
     alias ls='eza --icons=always'
@@ -16,7 +18,7 @@ if status is-interactive
     alias lt='eza --icons=always -la --tree'
     alias ytm='yt-dlp --cookies-from-browser firefox -o "%(artist)s - %(title)s" -x --embed-metadata'
     alias wlp='swww img'
-    
+
     # Yazi Integration
     function y
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
