@@ -16,7 +16,9 @@ if status is-interactive
     alias la='eza --icons=always -a'
     alias lla='eza --icons=always -la'
     alias lt='eza --icons=always -la --tree'
-    alias ytm='yt-dlp --cookies-from-browser firefox -o "%(artist)s - %(title)s" -x --embed-metadata'
+	# Error Tip: your_long_running_command 2>&1 | tee -a errors_warnings.log
+    # alias ytm='yt-dlp --cookies-from-browser firefox -o "%(artist)s - %(title)s" -x --embed-metadata'
+    alias ytm='yt-dlp -x --embed-metadata'
     alias wlp='swww img'
 
     # Yazi Integration
