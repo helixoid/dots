@@ -22,51 +22,16 @@
         trace: (fg: "magenta", bg: "black"),
     ),
     cava: (
-        // bar_symbol: "█",
-        /* bar_symbol: "", */
-        // bar_symbol: "▁▂▃▄▅▆▇█",
-        // bar_symbol: "󱗼",
-        // bar_symbols: ['▁', '▂', '▃', '▄', '▅', '▆', '▇', '█'],
         bar_symbols: ['▁', '▂', '▃', '▄', '▅', '▆', '▇', '█'],
         bar_width: 2,
         bar_spacing: 2,
-
-
         bg_color: None,
-        // bar_color: Single("blue"),
-        // bar_color: Rows([
-        //     // "red",
-        //     "red",
-        //     "green",
-        //     "green",
-        //     "blue",
-        // ])
-        // bar_color: Gradient(
-        //     {
-        //           0: "rgb(  0, 200,  40)",
-        //          20: "rgb(  0,   0, 255)",
-        //         100: "rgb(200,   0,  50)",
-        //     }
-        // )
-        // bar_color: Rows([
-        //     "#FF2D7D",
-        //     "#FF4FA3",
-        //     "#FF6EC7",
-        //     "#D67EFF",
-        //     "#9D8AFF",
-        //     "#6A9AFF",
-        //     "#38B6FF",
-        //     "#00D0E0",
-        // ]),
-        bar_color: Gradient({
-              0: "#FF2D7D",
-             14: "#FF4FA3",
-             28: "#FF6EC7",
-             42: "#D67EFF",
-             56: "#9D8AFF",
-             70: "#6A9AFF",
-             84: "#38B6FF",
-            100: "#00D0E0",
+	bar_color: Gradient({
+		0: "#83a598",
+		25: "#b8bb26",
+		50: "#fabd2f",
+		75: "#fe8019",
+		100: "#fb4934",
         }),
     ),
     lyrics: (
