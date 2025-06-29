@@ -13,6 +13,18 @@ vim.opt.mouse = 'a'
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
+-- Number of spaces a <Tab> counts for
+vim.opt.tabstop = 2
+
+-- Number of spaces for each indentation level
+vim.opt.shiftwidth = 2
+
+-- Convert tabs to spaces
+vim.opt.expandtab = true
+
+-- Enable auto-indentation
+vim.opt.autoindent = true
+
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.

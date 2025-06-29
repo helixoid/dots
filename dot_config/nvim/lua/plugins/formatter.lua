@@ -21,14 +21,14 @@ return {
     formatters_by_ft = {
       lua = { 'stylua' },
       python = { 'ruff' },
-      javascript = { 'prettierd', 'prettier', stop_after_first = true },
-      json = { 'prettierd', 'prettier', stop_after_first = true },
-      jsonc = { 'prettierd', 'prettier', stop_after_first = true },
-      css = { 'prettierd', 'prettier', stop_after_first = true },
+      javascript = { 'biome-check' },
+      json = { 'biome-check' },
+      jsonc = { 'biome-check' },
+      css = { 'biome-check' },
       yaml = { 'yamlfmt' },
       toml = { 'taplo' },
       sh = { 'shfmt' },
-      markdown = { 'prettierd', 'prettier', stop_after_first = true },
+      markdown = { 'biome-check' },
     },
     -- Set default options
     default_format_opts = {
