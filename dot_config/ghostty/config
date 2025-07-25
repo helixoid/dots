@@ -8,6 +8,6 @@ keybind = ctrl+shift+j=new_split:down
 keybind = ctrl+shift+l=new_split:right
 keybind = ctrl+shift+h=new_split:left
 keybind = ctrl+shift+t=new_tab
-#custom-shader = shaders/cursor_smear_fade.glsl
 custom-shader = shaders/cursor_blaze.glsl
+#custom-shader = shaders/cursor_smear_fade.glsl
 #custom-shader = shaders/bloom.glsl

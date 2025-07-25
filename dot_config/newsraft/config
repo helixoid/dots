@@ -1,0 +1,14 @@
+# Hide the "@" from the names.
+menu-section-entry-format %5.0u %t
+
+# Option to hide the @ Global Menu from the homepage.
+global-section-hide
+
+# Command binding for opening links with feh image viewer.
+bind i exec swayimg "%l"
+
+# This will launch mpv in the background.
+bind m exec mpv --no-terminal "%l" &
+
+# This will launch mpv interactively.
+bind M exec mpv "%l"
