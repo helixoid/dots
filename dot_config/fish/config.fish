@@ -7,6 +7,7 @@ if status is-interactive
   export BAT_THEME="gruvbox-dark"
 
   # Aliases
+  alias h="helix"
   alias v="nvim"
   alias dotsup="chezmoi re-add"
   alias dotspull="chezmoi update"
