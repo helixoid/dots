@@ -1,35 +1,34 @@
 if status is-interactive
-  set -x PATH ~/.local/bin $PATH
-  # Commands to run in interactive sessions can go here
-  # theme_gruvbox dark hard
-  starship init fish | source
-  atuin init fish | source
-  export BAT_THEME="gruvbox-dark"
+    set -x PATH ~/.local/bin $PATH
+    set fish_greeting ""
+    starship init fish | source
+    atuin init fish | source
+    export BAT_THEME="gruvbox-dark"
 
-  # Aliases
-  alias h="helix"
-  alias v="nvim"
-  alias dotsup="chezmoi re-add"
-  alias dotspull="chezmoi update"
-  alias mpc="rmpc"
-  alias prop="hyprctl clients | grep -i 'class\|title\|xwayland'"
-  alias ls='eza --icons=always'
-  alias ff='fastfetch'
-  alias la='eza --icons=always -a'
-  alias lla='eza --icons=always -la'
-  alias lt='eza --icons=always -la --tree'
-  # Error Tip: your_long_running_command 2>&1 | tee -a errors_warnings.log
-  # alias ytm='yt-dlp --cookies-from-browser firefox -o "%(artist)s - %(title)s" -x --embed-metadata'
-  alias ytm='yt-dlp -x --embed-metadata'
-  alias wlp='swww img'
+    # Aliases
+    alias h="helix"
+    alias v="nvim"
+    alias dotsup="chezmoi re-add"
+    alias dotspull="chezmoi update"
+    alias mpc="rmpc"
+    alias prop="hyprctl clients | grep -i 'class\|title\|xwayland'"
+    alias ls='eza --icons=always'
+    alias ff='fastfetch'
+    alias la='eza --icons=always -a'
+    alias lla='eza --icons=always -la'
+    alias lt='eza --icons=always -la --tree'
+    # Error Tip: your_long_running_command 2>&1 | tee -a errors_warnings.log
+    # alias ytm='yt-dlp --cookies-from-browser firefox -o "%(artist)s - %(title)s" -x --embed-metadata'
+    alias ytm='yt-dlp -x --embed-metadata'
+    alias wlp='swww img'
 
-  # Yazi Integration
-  function y
-    set tmp (mktemp -t "yazi-cwd.XXXXXX")
-    yazi $argv --cwd-file="$tmp"
-    if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-      builtin cd -- "$cwd"
+    # Yazi Integration
+    function y
+        set tmp (mktemp -t "yazi-cwd.XXXXXX")
+        yazi $argv --cwd-file="$tmp"
+        if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+            builtin cd -- "$cwd"
+        end
+        rm -f -- "$tmp"
     end
-    rm -f -- "$tmp"
-  end
 end

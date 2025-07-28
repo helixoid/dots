@@ -1,4 +1,4 @@
-window-decoration = server
+window-decoration = none
 font-family = JetBrains Mono
 font-size = 15
 theme = GruvboxDarkHard
