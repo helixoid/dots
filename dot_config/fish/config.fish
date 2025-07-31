@@ -7,6 +7,7 @@ if status is-interactive
 
     # Aliases
     alias h="helix"
+    # alias h="hx"
     alias v="nvim"
     alias dotsup="chezmoi re-add"
     alias dotspull="chezmoi update"

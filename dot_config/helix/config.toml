@@ -15,9 +15,16 @@ select = "underline"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
+left = ["mode", "spinner", "file-name", "file-modification-indicator"]
+center = ["file-type"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending"]
+separator = "│"
 
 [editor.file-picker]
 hidden = false
 
 [keys.insert]
 "C-[" = "normal_mode"
+
+[keys.normal]
+"ret" = "goto_word"
