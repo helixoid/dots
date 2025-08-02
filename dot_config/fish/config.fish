@@ -2,6 +2,7 @@ if status is-interactive
     set -x PATH ~/.local/bin $PATH
     set fish_greeting ""
     starship init fish | source
+    zoxide init fish | source
     atuin init fish | source
     export BAT_THEME="gruvbox-dark"
 
