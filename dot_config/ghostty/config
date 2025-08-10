@@ -1,8 +1,8 @@
 window-decoration = server
 font-family = JetBrains Mono
-font-size = 15
+font-size = 16
 theme = GruvboxDarkHard
-background-opacity = 0.75
+background-opacity = 0.8
 keybind = ctrl+shift+k=new_split:up
 keybind = ctrl+shift+j=new_split:down
 keybind = ctrl+shift+l=new_split:right
