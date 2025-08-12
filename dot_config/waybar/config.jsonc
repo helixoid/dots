@@ -12,12 +12,10 @@
     "temperature",
     "battery",
     "power-profiles-daemon",
-    // "mpris",
     "hyprland/window"
   ],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
-    "custom/cava_mviz",
     "tray",
     "idle_inhibitor",
     "network",

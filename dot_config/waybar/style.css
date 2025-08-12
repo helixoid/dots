@@ -1,7 +1,7 @@
 /** biome-ignore-all lint/a11y/useGenericFontNames: <explanation> */
 @import "mocha.css";
 * {
-  /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
+  /* all: unset; */
   font-family: "Adwaita Sans, Symbols Nerd Font";
   font-size: 15px;
 }

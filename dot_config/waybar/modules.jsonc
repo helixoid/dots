@@ -5,10 +5,6 @@
     "tooltip": true,
     "tooltip-format": "btw 😎"
   },
-  "custom/cava_mviz": {
-    "exec": "$HOME/.config/waybar/WaybarCava.sh",
-    "format": "{}"
-  },
   "hyprland/workspaces": {
     "disable-scroll": false,
     "all-outputs": true,
@@ -98,10 +94,10 @@
     "on-click-middle": "acpi -i",
     "format": "{icon}  {capacity}%",
     "format-full": "{icon}  {capacity}%",
-    "format-charging": " {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
     "format-plugged": " {capacity}%",
     "format-alt": "{time}  {icon}",
-    "format-icons": ["", "", "", "", ""]
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
   },
   "clock": {
     "format": "󰥔 {:%H:%M} ",
