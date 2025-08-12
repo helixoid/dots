@@ -13,8 +13,9 @@ https://nyaa.si/?page=rss&c=2_1&f=0&u=Mashin "Mashin | Nyaa"
 
 @  FOSS Updates < reload-period 1
 https://github.com/hyprwm/Hyprland/releases.atom "Hyprland Updates"
-https://github.com/YaLTeR/niri/releases.atom "Niri WC Updates"
-https://github.com/ghostty-org/ghostty/tags.atom "Ghostty Terminal Emulator Updates"
+https://github.com/YaLTeR/niri/releases.atom "Niri WM Updates"
+https://github.com/raphamorim/rio/releases.atom "Rio Terminal Updates"
+https://github.com/ghostty-org/ghostty/tags.atom "Ghostty Terminal Updates"
 https://github.com/sxyazi/yazi/releases.atom "Yazi File Manger Updates"
 https://github.com/9001/copyparty/releases.atom "Copyparty Updates"
 https://github.com/mierak/rmpc/releases.atom "RMPC Music Player Updates"
