@@ -12,6 +12,8 @@ https://nyaa.si/?page=rss&u=HAYAKU-tan "HAYAKU-tan | Nyaa"
 https://nyaa.si/?page=rss&c=2_1&f=0&u=Mashin "Mashin | Nyaa"
 
 @  FOSS Updates < reload-period 1
+https://github.com/CachyOS/proton-cachyos/releases.atom "CachyOS Proton Updates"
+https://github.com/christo-auer/eilmeldung/releases.atom "Eilmeldung RSS Reader Updates"
 https://github.com/hyprwm/Hyprland/releases.atom "Hyprland Updates"
 https://github.com/YaLTeR/niri/releases.atom "Niri WM Updates"
 https://github.com/raphamorim/rio/releases.atom "Rio Terminal Updates"
