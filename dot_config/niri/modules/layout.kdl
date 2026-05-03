@@ -1,0 +1,5 @@
+// Layout Settings for the compositor
+layout {
+    gaps 10
+    background-color "transparent"
+}

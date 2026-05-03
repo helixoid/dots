@@ -1,0 +1,28 @@
+// Window Management Rules for the compositor
+window-rule {
+    geometry-corner-radius 20
+    clip-to-geometry true
+}
+window-rule {
+    match app-id="zen-beta"
+    match app-id="gimp"
+    match app-id="dev.zed.Zed"
+    open-maximized true
+}
+window-rule {
+    match app-id="org.gnome.Calculator"
+    match app-id="steam"
+    match app-id="org.pulseaudio.pavucontrol"
+    match app-id="waypaper"
+    match app-id="thunar"
+    match app-id="org.gnome.FileRoller"
+    match title="File Operation Progress"
+    open-floating true
+    shadow {
+        on
+        softness 50
+        spread 8
+        offset x=0 y=8
+        color "#00000090"
+    }
+}

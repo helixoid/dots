@@ -1,0 +1,10 @@
+// Compositor Overview Settings
+overview {
+    workspace-shadow {
+        softness 60
+        spread 15
+        offset x=0 y=15
+        color "#00000070"
+    }
+}
+

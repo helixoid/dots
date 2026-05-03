@@ -1,0 +1,7 @@
+// Gestures Settings
+gestures {
+    hot-corners {
+        off
+    }
+}
+

@@ -1,0 +1,133 @@
+// Keybinds for the compositor
+binds {
+    // Applications
+    Mod+Return {
+        spawn "kitty"
+    }
+    Mod+Space {
+        spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"
+    }
+    Alt+I {
+        spawn "zen-beta"
+    }
+    Alt+E {
+        spawn "nautilus"
+    }
+    Mod+C {
+        spawn "noctalia-shell" "ipc" "call" "launcher" "clipboard"
+    }
+    Mod+Backspace {
+        spawn "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"
+    }
+    // Backlight and Audio
+    XF86MonBrightnessUp allow-when-locked=true {
+        spawn "noctalia-shell" "ipc" "call" "brightness" "increase"
+    }
+    XF86MonBrightnessDown allow-when-locked=true {
+        spawn "noctalia-shell" "ipc" "call" "brightness" "decrease"
+    }
+    XF86AudioRaiseVolume allow-when-locked=true {
+        spawn "noctalia-shell" "ipc" "call" "volume" "increase"
+    }
+    XF86AudioLowerVolume allow-when-locked=true {
+        spawn "noctalia-shell" "ipc" "call" "volume" "decrease"
+    }
+    XF86AudioMute allow-when-locked=true {
+        spawn "noctalia-shell" "ipc" "call" "volume" "muteOutput"
+    }
+    XF86AudioPlay allow-when-locked=true {
+        spawn "playerctl" "play-pause"
+    }
+    XF86AudioPause allow-when-locked=true {
+        spawn "playerctl" "pause"
+    }
+    XF86AudioNext allow-when-locked=true {
+        spawn "playerctl" "next"
+    }
+    XF86AudioPrev allow-when-locked=true {
+        spawn "playerctl" "previous"
+    }
+    // Windows and Columns
+    Mod+Q {
+        close-window
+    }
+    Mod+W {
+        switch-preset-column-width
+    }
+    Mod+T {
+        toggle-window-floating
+    }
+    Mod+M {
+        maximize-column
+    }
+    Mod+Ctrl+M {
+        maximize-window-to-edges
+    }
+    Mod+F {
+        fullscreen-window
+    }
+    Mod+H {
+        focus-column-left
+    }
+    Mod+L {
+        focus-column-right
+    }
+    Mod+J {
+        focus-window-or-workspace-down
+    }
+    Mod+K {
+        focus-window-or-workspace-up
+    }
+    Mod+Shift+H {
+        move-column-left
+    }
+    Mod+Shift+L {
+        move-column-right
+    }
+    Mod+Ctrl+H {
+        set-column-width "-10%"
+    }
+    Mod+Ctrl+L {
+        set-column-width "+10%"
+    }
+    Mod+Ctrl+K {
+        set-window-height "+10%"
+    }
+    Mod+Ctrl+J {
+        set-window-height "-10%"
+    }
+    Mod+BracketLeft {
+        consume-or-expel-window-left
+    }
+    Mod+BracketRight {
+        consume-or-expel-window-right
+    }
+    Mod+Comma {
+        consume-window-into-column
+    }
+    Mod+Period {
+        expel-window-from-column
+    }
+    Alt+Tab repeat=false {
+        spawn "pkill" "-USR1" "niriswitcher"
+    }
+    Mod+Shift+J {
+        move-column-to-workspace-down
+    }
+    Mod+Shift+K {
+        move-column-to-workspace-up
+    }
+    Mod+O {
+        toggle-overview
+    }
+    Print {
+        screenshot
+    }
+    Ctrl+Print {
+        screenshot-window
+    }
+    Shift+Print {
+        screenshot-screen
+    }
+}
+
