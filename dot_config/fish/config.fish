@@ -1,16 +1,17 @@
 if status is-interactive
     set -x PATH ~/.local/bin $PATH
-    set fish_greeting ""
+    function fish_greeting
+        fastfetch
+    end
     starship init fish | source
     zoxide init fish | source
     atuin init fish | source
-    export BAT_THEME="gruvbox-dark"
 
     # Aliases
     alias hx="helix"
     alias typ="ttyper"
-    # alias h="hx"
     alias v="nvim"
+    alias vim="nvim"
     alias dotsup="chezmoi re-add"
     alias dotspull="chezmoi update"
     alias mpc="rmpc"
@@ -20,18 +21,4 @@ if status is-interactive
     alias la='eza --icons=always -a'
     alias lla='eza --icons=always -la'
     alias lt='eza --icons=always -la --tree'
-    # Error Tip: your_long_running_command 2>&1 | tee -a errors_warnings.log
-    # alias ytm='yt-dlp --cookies-from-browser firefox -o "%(artist)s - %(title)s" -x --embed-metadata'
-    alias ytm='yt-dlp -x --embed-metadata'
-    alias wlp='swww img'
-
-    # Yazi Integration
-    function y
-        set tmp (mktemp -t "yazi-cwd.XXXXXX")
-        yazi $argv --cwd-file="$tmp"
-        if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-            builtin cd -- "$cwd"
-        end
-        rm -f -- "$tmp"
-    end
 end
