@@ -1,73 +1,67 @@
--- [[ Set to true if you have a Nerd Font installed and selected in the terminal ]]
-vim.g.have_nerd_font = true
+-- Setting the leader key
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
--- Make line numbers default
-vim.opt.number = true
--- You can also add relative line numbers, to help with jumping.
---  Experiment for yourself to see if you like it!
-vim.opt.relativenumber = true
+local opt = vim.opt
 
--- Enable mouse mode, can be useful for resizing splits for example!
-vim.opt.mouse = 'a'
+-- Line Numbering Settings
+opt.number = true
+opt.relativenumber = true
+opt.cursorline = true
+opt.wrap = true
+opt.signcolumn = 'yes'
 
--- Don't show the mode, since it's already in the status line
-vim.opt.showmode = false
+-- Tab Settings
+opt.tabstop = 2
+opt.expandtab = true
+opt.shiftwidth = 2
+opt.shiftround = true
+opt.smartindent = true
 
--- Number of spaces a <Tab> counts for
-vim.opt.tabstop = 2
+-- Search Settings
+opt.ignorecase = true
+opt.smartcase = true
+opt.incsearch = true
+opt.hlsearch = true
 
--- Number of spaces for each indentation level
-vim.opt.shiftwidth = 2
+-- QOL Settings
+opt.winborder = 'rounded'
+opt.showmode = false
+opt.clipboard = 'unnamedplus'
+opt.timeoutlen = 300
+opt.splitbelow = true
+opt.splitright = true
+opt.termguicolors = true
 
--- Convert tabs to spaces
-vim.opt.expandtab = true
+-- Buffer Settings
+opt.undofile = true
+opt.list = true
+opt.listchars = {
+  tab = '» ',
+  trail = '·',
+  nbsp = '␣',
+}
+opt.inccommand = 'split'
+opt.scrolloff = 10
+opt.foldmethod = 'indent'
+opt.foldlevel = 99
+opt.foldenable = false
 
--- Enable auto-indentation
-vim.opt.autoindent = true
+-- Enable the experimental UI2 subsystem
+require('vim._core.ui2').enable {}
 
--- Sync clipboard between OS and Neovim.
---  Schedule the setting after `UiEnter` because it can increase startup-time.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
-vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
-end)
-
--- Enable break indent
-vim.opt.breakindent = true
-
--- Save undo history
-vim.opt.undofile = true
-
--- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-
--- Keep signcolumn on by default
-vim.opt.signcolumn = 'yes'
-
--- Decrease update time
-vim.opt.updatetime = 250
-
--- Decrease mapped sequence wait time
--- Displays which-key popup sooner
-vim.opt.timeoutlen = 300
-
--- Configure how new splits should be opened
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-
--- Sets how neovim will display certain whitespace characters in the editor.
---  See `:help 'list'`
---  and `:help 'listchars'`
-vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
-
--- Preview substitutions live, as you type!
-vim.opt.inccommand = 'split'
-
--- Show which line your cursor is on
-vim.opt.cursorline = true
-
--- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+-- Diagnostics Icons in the gutter
+vim.diagnostic.config {
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = '',
+      [vim.diagnostic.severity.WARN] = '',
+      [vim.diagnostic.severity.HINT] = '󰌵',
+      [vim.diagnostic.severity.INFO] = '',
+    },
+  },
+  virtual_lines = {
+    current_line = true,
+  },
+  virtual_text = false,
+}

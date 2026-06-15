@@ -2,6 +2,7 @@
 local map = vim.keymap.set
 
 map('n', '<leader>q', ':q!<CR>', { desc = 'Quit without saving' })
+map('n', '<leader>u', ':lua require("fff.download").download_or_build_binary()<CR>', { desc = 'Update the FFF binary' })
 map('n', '<leader>f', function()
   require('fff').find_files()
 end, { desc = 'Find Files' })
